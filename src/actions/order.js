@@ -1,7 +1,18 @@
-export function update(obj) {
+export function request() {
   return {
-    type: 'UPDATE',
-    payload: obj
+    type: 'REQUEST'
+  };
+}
+
+export function success() {
+  return {
+    type: 'SUCCESS'
+  };
+}
+
+export function failure() {
+  return {
+    type: 'FAILURE'
   };
 }
 
