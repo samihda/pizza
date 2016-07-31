@@ -20,7 +20,7 @@ describe('<Review />', () => {
 
   const wrapper = shallow(<Review onPrevClick={dummy} form={form} />);
   
-  it('should contain the OrderButton element', () => {
+  it('should contain OrderButtonContainer', () => {
     expect(wrapper.contains(<OrderButtonContainer />)).to.be.true;
   });
 });
