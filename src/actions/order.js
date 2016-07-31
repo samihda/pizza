@@ -1,7 +1,7 @@
 import fetch from 'isomorphic-fetch';
 import { next } from './step';
 
-const endPoint = `https://echo.getpostman.com/post`;
+const endPoint = `http://eu.httpbin.org/post`;
 
 export function ajaxCall(order) {
   return function(dispatch) {
