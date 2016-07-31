@@ -1,6 +1,6 @@
 import React from 'react';
 import { expect } from 'chai';
-import { shallow } from 'enzyme';
+import shallow from 'enzyme/shallow';
 import MainMenu from '../MainMenu';
 
 describe('<MainMenu />', () => {
