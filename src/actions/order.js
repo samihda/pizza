@@ -1,16 +1,37 @@
-export function request() {
+import fetch from 'isomorphic-fetch';
+import { next } from './step';
+
+const endPoint = `https://echo.getpostman.com/post`;
+
+export function ajaxCall(order) {
+  return function(dispatch) {
+    dispatch(request());
+
+    fetch(endPoint, {
+      method: 'POST',
+      body: JSON.stringify(order)
+    }).then(() => {
+      dispatch(success());
+      dispatch(next());
+    }).catch(() => {
+      dispatch(failure());
+    });
+  };
+}
+
+function request() {
   return {
     type: 'REQUEST'
   };
 }
 
-export function success() {
+function success() {
   return {
     type: 'SUCCESS'
   };
 }
 
-export function failure() {
+function failure() {
   return {
     type: 'FAILURE'
   };
