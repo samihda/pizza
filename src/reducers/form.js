@@ -1,14 +1,14 @@
 import assign from 'object-assign';
 
 const initialState = {
-  size: 0,
+  size: 30,
   ingredients: [],
   rand: false,
   firstName: '',
   lastName: '',
   street: '',
-  houseNumber: 0,
-  postCode: 0,
+  houseNumber: '',
+  postCode: '',
   city: ''
 };
 
