@@ -1,5 +1,4 @@
-import MainMenu from './MainMenu';
-import Sequence from './Sequence';
-import CornerButton from './CornerButton';
+import Navigation from './Navigation';
+import Logo from './Logo';
 
-export { MainMenu, Sequence, CornerButton };
+export { Navigation, Logo };

@@ -1,17 +1,20 @@
 import React from 'react';
+import CornerButton from './CornerButton';
 
-const MainMenu = () => {
+const MainMenu = (props) => {
   const text = ['OVERVIEW', `TODAY'S MEAL`, 'MORE'];
 
   return (
-    <nav>
-      <ul>
-        {text.map((str, i) =>
-          <li key={i}>
-            <a href="#">{str}</a>
-          </li>)}
-      </ul>
-    </nav>
+    <ul className="pure-menu-list">
+      {text.map((str, i) =>
+        <li className="pure-menu-item" key={i}>
+          <a href="#" className="pure-menu-link white-text">{str}</a>
+        </li>
+      )}
+      <li className="pure-menu-item">
+        <CornerButton {...props} />
+      </li>
+    </ul>
   );
 };
 

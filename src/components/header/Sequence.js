@@ -1,20 +1,29 @@
 import React from 'react';
+import CornerButton from './CornerButton';
 
-const Sequence = ({ step }) => {
+const Sequence = (props) => {
   const text = ['ORDER', 'ADDRESS', 'FINISH'];
-
+  
   return (
-    <nav>
-      <ul>
-        {text.map((str, i) =>
-          <li
-            key={i}
-            className={i < step ? 'active' : ''}
-          >
-            <a href="#">{str}</a>
-          </li>)}
-      </ul>
-    </nav>
+    <ul id="sequence" className="pure-menu-list">
+      {props.step < 4 ? text.map((str, i) =>
+        <li
+          key={i}
+          className={
+            i === props.step - 1 ?
+            'pure-menu-item active' :
+            'pure-menu-item'
+          }
+        >
+          <a href="#" className="pure-menu-link">
+            {str}
+          </a>
+        </li>
+      ) : null}
+      <li className="pure-menu-item">
+        <CornerButton {...props} />
+      </li>
+    </ul>
   );
 };
 
