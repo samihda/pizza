@@ -7,14 +7,14 @@ const OrderButton = ({ onRequestClick, form, order }) => {
 
   switch (order) {
     case 'SUBMITTING':
-      return (<button>Sending...</button>);
+      return (<button className="button-red pure-button">Sending...</button>);
     case 'SUBMITTED':
-      return (<button>Sent</button>);
+      return (<button className="button-red pure-button">Sent</button>);
     case 'FAILED':
-      return (<button>Failed</button>);
+      return (<button className="button-red pure-button">Failed</button>);
     case 'UNSUBMITTED':
     default:
-      return (<button onClick={handleClick}>Make Order</button>);
+      return (<button onClick={handleClick} className="button-red pure-button">Make Order</button>);
   }
 };
 

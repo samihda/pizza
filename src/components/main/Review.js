@@ -8,25 +8,35 @@ const Review = ({ onPrevClick, form }) => {
 
   return (
     <main>
-      <h1>Everything correct?</h1>
-      <h2>Your order:</h2>
-      <h3>Steinofen-Pizza:</h3>
-      <p>1x</p>
-      <h3>Pizza size:</h3>
-      <p>{form.size} cm</p>
-      <h3>Ingredients:</h3>
-      <p>{selected}</p>
-      <h3>Cheese rand:</h3>
-      <p>{form.rand ? 'Yes' : 'No'}</p>
-      <h2>Delivery Address:</h2>
-      <p>{form.firstName} {form.lastName}</p>
-      <p>{form.street}, {form.houseNumber}</p>
-      <p>{form.postCode}, {form.city}</p>
-      <button onClick={onPrevClick}>
-        <span> <img src="/assets/icons/back_arrow.svg" /></span>
-        Back
-      </button>
-      <OrderButtonContainer />
+      <div className="paper-white">
+        <h1>Everything correct?</h1>
+        <h2>Your order:</h2>
+        <div className="column-parent">
+          <div className="column text-left">
+            <h3>Steinofen-Pizza:</h3>
+            <p>1x</p>
+            <h3>Ingredients:</h3>
+            <p>{selected}</p>
+          </div>
+          <div className="column text-right">
+            <h3>Pizza size:</h3>
+            <p>{form.size} cm</p>
+            <h3>Cheese rand:</h3>
+            <p>{form.rand ? 'Yes' : 'No'}</p>
+          </div>
+        </div>
+        <h2>Delivery Address:</h2>
+        <p>{form.firstName} {form.lastName}</p>
+        <p>{form.street}, {form.houseNumber}</p>
+        <p>{form.postCode}, {form.city}</p>
+      </div>
+      <div className="paper-white">
+        <button onClick={onPrevClick} className="pure-button button-previous">
+          <img className="icon-left" src="/assets/icons/back_arrow.svg" />
+          <span>Back</span>
+        </button>
+        <OrderButtonContainer />
+      </div>
     </main>
   );
 };

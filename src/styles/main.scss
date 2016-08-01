@@ -29,7 +29,7 @@ body::before {
 main {
   margin: 0 auto;
   padding: 2em;
-  width: 600px;
+  width: 720px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -41,6 +41,7 @@ header {
   box-sizing: border-box;
   width: 100%;
   padding: 1.5em;
+  margin-bottom: 3em;
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
@@ -78,6 +79,12 @@ li {
   @extend .icon-button;
 }
 
+// #sequence li:not(:first)::before {
+//   content: '->';
+//   position: relative;
+//   left: -1px;
+// }
+
 .button-red {
   @extend .red;
   @extend .button-large;
@@ -86,8 +93,8 @@ li {
 }
 
 .paper {
-  padding: 1em 2em 3em;
-  margin: 1em 0 1em;
+  padding: 2em 2em 2.5em;
+  border-radius: 2px;
 }
 
 .paper-white {
@@ -157,4 +164,22 @@ li {
 
 .text-bold {
   font-weight: 700;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.column-parent {
+  display: flex-inline;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.column {
+  display: inline-block;
 }
