@@ -56,76 +56,106 @@ export default class ContactForm extends React.Component {
   render() {
     return (
       <main>
-        <form onSubmit={this.handleSubmit}>
-          <h1>Delivery Address</h1>
-          <label>
-            FIRST NAME
-            <input
-              id="firstName"
-              type="text"
-              placeholder="First Name"
-              value={this.state.firstName}
-              onChange={this.handleChange}
-              required={true}
-            />
-          </label>
-          <label>
-            SURNAME
-            <input
-              id="lastName"
-              type="text"
-              placeholder="Surname"
-              value={this.state.lastName}
-              onChange={this.handleChange}
-              required={true}
-            />
-          </label>
-          <label>
-            STREET/NO
-            <input
-              id="street"
-              type="text"
-              placeholder="Street"
-              value={this.state.street}
-              onChange={this.handleChange}
-              required={true}
-            />
-            <input
-              id="houseNumber"
-              type="text"
-              placeholder="No."
-              value={this.state.houseNumber}
-              onChange={this.handleChange}
-              required={true}
-            />
-          </label>
-          <label>
-            POSTCODE/CITY
-            <input
-              id="postCode"
-              type="text"
-              placeholder="Postcode"
-              value={this.state.postCode}
-              onChange={this.handleChange}
-              required={true}
-            />
-            <input
-              id="city"
-              type="text"
-              placeholder="City"
-              value={this.state.city}
-              onChange={this.handleChange}
-              required={true}
-            />
-          </label>
-          <button type="button" onClick={this.handleReturn}>
-            <span><img src="/assets/icons/back_arrow.svg" /> </span>
-            Back
-          </button>
-          <button>
-            Next
-            <span> <img src="/assets/icons/next_icon.svg" /></span>
-          </button>
+        <form onSubmit={this.handleSubmit} className="pure-form pure-form-stacked">
+          <div className="paper-white text-left">
+            <h1 className="text-center">Delivery Address</h1>
+            <label>
+              <strong>FIRST NAME</strong>
+              <div className="pure-g">
+                <div className="pure-u-1">
+                  <input
+                    id="firstName"
+                    type="text"
+                    placeholder="First Name"
+                    value={this.state.firstName}
+                    onChange={this.handleChange}
+                    required={true}
+                    className="pure-input-1"
+                  />
+                </div>
+              </div>
+            </label>
+            <label>
+              <strong>SURNAME</strong>
+              <div className="pure-g">
+                <div className="pure-u-1">
+                  <input
+                    id="lastName"
+                    type="text"
+                    placeholder="Surname"
+                    value={this.state.lastName}
+                    onChange={this.handleChange}
+                    required={true}
+                    className="pure-input-1"
+                  />
+                </div>
+              </div>
+            </label>
+            <label>
+              <strong>STREET/NO</strong>
+              <div className="pure-g">
+                <div className="pure-u-5-6">
+                  <input
+                    id="street"
+                    type="text"
+                    placeholder="Street"
+                    value={this.state.street}
+                    onChange={this.handleChange}
+                    required={true}
+                    className="pure-input-1"
+                  />
+                </div>
+                <div className="pure-u-1-6">
+                  <input
+                    id="houseNumber"
+                    type="text"
+                    placeholder="No."
+                    value={this.state.houseNumber}
+                    onChange={this.handleChange}
+                    required={true}
+                    className="pure-input-1"
+                  />
+                </div>
+              </div>
+            </label>
+            <label>
+              <strong>POSTCODE/CITY</strong>
+              <div className="pure-g">
+                <div className="pure-u-1-3">
+                  <input
+                    id="postCode"
+                    type="text"
+                    placeholder="Postcode"
+                    value={this.state.postCode}
+                    onChange={this.handleChange}
+                    required={true}
+                    className="pure-input-1"
+                  />
+                </div>
+                <div className="pure-u-2-3">
+                  <input
+                    id="city"
+                    type="text"
+                    placeholder="City"
+                    value={this.state.city}
+                    onChange={this.handleChange}
+                    required={true}
+                    className="pure-input-1"
+                  />
+                </div>
+              </div>
+            </label>
+          </div>
+          <div className="paper-white">
+            <button type="button" onClick={this.handleReturn} className="pure-button button-previous">
+              <img className="icon-left" src="/assets/icons/back_arrow.svg" />
+              <span>Back</span>
+            </button>
+            <button className="button-red pure-button">
+              <span>Next</span>
+              <img className="icon-right" src="/assets/icons/next_icon.svg" />
+            </button>
+          </div>
         </form>
       </main>
     );

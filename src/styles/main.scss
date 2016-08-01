@@ -5,6 +5,7 @@ $primary: rgb(81, 81, 81);
 $red: rgb(228, 80, 80);
 $green: rgb(124, 211, 138);
 $orange: rgb(255, 212, 134);
+$gray: rgb(249, 249, 249);
 
 body {
   color: white;
@@ -27,10 +28,10 @@ body::before {
 }
 
 main {
+  @extend .text-center;
   margin: 0 auto;
   padding: 2em;
   width: 720px;
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -52,6 +53,10 @@ nav {
     margin: 0 1em;
     padding: 1em 2em;
   }
+}
+
+form {
+  line-height: 2em;
 }
 
 a {
@@ -79,11 +84,9 @@ li {
   @extend .icon-button;
 }
 
-// #sequence li:not(:first)::before {
-//   content: '->';
-//   position: relative;
-//   left: -1px;
-// }
+input[type="text"] {
+  background-color: $gray;
+}
 
 .button-red {
   @extend .red;
@@ -93,7 +96,7 @@ li {
 }
 
 .paper {
-  padding: 2em 2em 2.5em;
+  padding: 2em 10em 2.5em;
   border-radius: 2px;
 }
 
@@ -172,6 +175,10 @@ li {
 
 .text-left {
   text-align: left;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .column-parent {
