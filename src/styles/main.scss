@@ -1,8 +1,104 @@
 @import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
 
+$font-stack: 'PT Sans', sans-serif;
+$primary: rgb(81, 81, 81);
+$red: rgb(228, 80, 80);
+$green: rgb(124, 211, 138);
+$orange: rgb(255, 212, 134);
+
 body {
-  // color: white;
-  // background: url(../assets/background-picture.jpeg) no-repeat center center fixed;
+  color: white;
+  background: url(../assets/background-picture.jpeg) no-repeat center center fixed;
   background-size: cover;
-  font-family: 'PT Sans';
+  font-family: $font-stack;
+  min-width: 768px;
+}
+
+body::before {
+  content: '';
+  background-color: rgba(255, 255, 255, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+header {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1.5em;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+}
+
+nav {
+  button {
+    margin-left: 1em;
+    padding: 1em 2em;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+#logo {
+  font-size: 1.25em;
+}
+
+.translucent {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.white {
+  color: $primary;
+  background-color: white;
+}
+
+.red {
+  color: white;
+  background-color: $red;
+}
+
+.green {
+  color: white;
+  background-color: $green;
+}
+
+.active {
+  border-bottom: 2px solid $red;
+}
+
+.white-text {
+  color: white;
+}
+
+.dark-text {
+  color: $primary;
+}
+
+.button-large {
+  padding: 1em 2em;
+}
+
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+}
+
+.icon-left {
+  margin-right: 12px;
+}
+
+.icon-right {
+  margin-left: 12px;
 }
