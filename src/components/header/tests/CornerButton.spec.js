@@ -20,6 +20,6 @@ describe('<CornerButton />', () => {
 
   it('should render ordering state', () => {
     wrapper.setProps({ step: 1 });
-    expect(wrapper.find('button').prop('children')).to.equal('CANCEL ORDER');
+    expect(wrapper.find('span').prop('children')).to.equal('CANCEL ORDER');
   });
 });

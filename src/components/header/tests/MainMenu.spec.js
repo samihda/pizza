@@ -6,6 +6,6 @@ import MainMenu from '../MainMenu';
 describe('<MainMenu />', () => {
   it('should contain three list items', () => {
     const wrapper = shallow(<MainMenu />);
-    expect(wrapper.find('li')).to.have.length(3);
+    expect(wrapper.find('li')).to.have.length(4);
   });
 });
