@@ -15,7 +15,7 @@ describe('<CornerButton />', () => {
 
   it('should render finished state', () => {
     wrapper.setProps({ step: 4 });
-    expect(wrapper.find('button').prop('children')).to.equal('ORDER SENT');
+    expect(wrapper.find('button').prop('children')).to.have.string('ORDER SENT');
   });
 
   it('should render ordering state', () => {
