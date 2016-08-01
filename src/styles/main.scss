@@ -30,16 +30,19 @@ main {
   padding: 2em;
   width: 600px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header {
+  @extend .text-bold;
   box-sizing: border-box;
   width: 100%;
   padding: 1.5em;
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: 700;
 }
 
 nav {
@@ -61,6 +64,14 @@ li {
   font-size: 1.25em;
 }
 
+#splash-button {
+  @extend .red;
+  @extend .icon-button;
+  @extend .bottom-shadow;
+  @extend .button-large;
+  @extend .text-bold;
+}
+
 .translucent {
   color: white;
   background-color: rgba(255, 255, 255, 0.2);
@@ -79,10 +90,6 @@ li {
 .green {
   color: white;
   background-color: $green;
-}
-
-.sequence-active {
-  border-bottom: 2px solid $red;
 }
 
 .white-text {
@@ -109,4 +116,17 @@ li {
 
 .icon-right {
   margin-left: 12px;
+}
+
+.bottom-shadow {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.bottom-shadow-red {
+  @extend .bottom-shadow;
+  border-bottom-color: $red;
+}
+
+.text-bold {
+  font-weight: 700;
 }
