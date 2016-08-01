@@ -36,8 +36,8 @@ header {
 }
 
 nav {
-  button {
-    margin-left: 1em;
+  button, a {
+    margin: 0 1em;
     padding: 1em 2em;
   }
 }
@@ -74,7 +74,7 @@ li {
   background-color: $green;
 }
 
-.active {
+.sequence-active {
   border-bottom: 2px solid $red;
 }
 
@@ -88,6 +88,7 @@ li {
 
 .button-large {
   padding: 1em 2em;
+  margin-right: 0;
 }
 
 .icon-button {
