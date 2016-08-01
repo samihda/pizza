@@ -25,6 +25,13 @@ body::before {
   z-index: -1;
 }
 
+main {
+  margin: 0 auto;
+  padding: 2em;
+  width: 600px;
+  text-align: center;
+}
+
 header {
   box-sizing: border-box;
   width: 100%;
