@@ -10,7 +10,7 @@ const Sequence = (props) => {
         <li key={i} className="pure-menu-item">
           <a href="#" className={
             i === props.step - 1 ?
-            'pure-menu-link sequence-active' :
+            'pure-menu-link bottom-shadow-red' :
             'pure-menu-link'
           }>
             {str}
