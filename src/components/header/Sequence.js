@@ -7,15 +7,12 @@ const Sequence = (props) => {
   return (
     <ul id="sequence" className="pure-menu-list">
       {props.step < 4 ? text.map((str, i) =>
-        <li
-          key={i}
-          className={
+        <li key={i} className="pure-menu-item">
+          <a href="#" className={
             i === props.step - 1 ?
-            'pure-menu-item active' :
-            'pure-menu-item'
-          }
-        >
-          <a href="#" className="pure-menu-link">
+            'pure-menu-link sequence-active' :
+            'pure-menu-link'
+          }>
             {str}
           </a>
         </li>
