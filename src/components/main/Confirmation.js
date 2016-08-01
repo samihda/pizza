@@ -2,11 +2,15 @@ import React from 'react';
 
 const Confirmation = ({ onResetClick, form }) => (
   <main>
-    <h1>Thank you for your order, {form.firstName}!</h1>
-    <h2>Order is on the way.</h2>
-    <button onClick={onResetClick}>
-      Close
-    </button>
+    <div className="paper-white">
+      <h1>Thank you for your order, {form.firstName}!</h1>
+      <strong>Order is on the way.</strong>
+    </div>
+    <div className="paper">
+      <button className="button-red pure-button" onClick={onResetClick}>
+        Close
+      </button>
+    </div>
   </main>
 );
 

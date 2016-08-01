@@ -11,6 +11,7 @@ body {
   background: url(../assets/background-picture.jpeg) no-repeat center center fixed;
   background-size: cover;
   font-family: $font-stack;
+  height: 100vh;
   min-width: 768px;
 }
 
@@ -60,16 +61,39 @@ li {
   list-style: none;
 }
 
+#app {
+  height: 100%;
+}
+
+#app > div {
+  height: 100%;
+}
+
 #logo {
   font-size: 1.25em;
 }
 
 #splash-button {
-  @extend .red;
+  @extend .button-red;
   @extend .icon-button;
-  @extend .bottom-shadow;
+}
+
+.button-red {
+  @extend .red;
   @extend .button-large;
+  @extend .bottom-shadow;
   @extend .text-bold;
+}
+
+.paper {
+  padding: 1em 2em 3em;
+  margin: 1em 0 1em;
+}
+
+.paper-white {
+  @extend .paper;
+  @extend .white;
+  @extend .bottom-shadow;
 }
 
 .translucent {
@@ -90,6 +114,10 @@ li {
 .green {
   color: white;
   background-color: $green;
+}
+
+.orange-background {
+  background-color: $orange;
 }
 
 .white-text {
