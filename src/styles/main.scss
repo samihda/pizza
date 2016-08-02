@@ -98,7 +98,6 @@ li {
 
 .rand-switch {
   box-sizing: border-box;
-  position: relative;
   margin: 0.5em auto;
   width: 50px;
   height: 30px;
@@ -111,7 +110,7 @@ li {
   width: 24px;
   height: 24px;
   border-radius: 12px;
-  position: absolute;
+  position: relative;
   top: 3px;
   left: 3px;
   background-color: white;
