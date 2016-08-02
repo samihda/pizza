@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Splash = ({ onStartClick }) => (
-  <main>
+  <main className="text-bold">
     <div className="paper">
       <img src="/assets/logo/feedme_logo_white.svg" />
       <h1>Chosen food every 5 days</h1>
@@ -16,7 +16,7 @@ const Splash = ({ onStartClick }) => (
     <div className="paper">
       <p>Check out our meal for tomorrow.</p>
       <small>Made with love.</small>
-      <div><img src="/assets/icons/scroll_icon.svg" /></div>
+      <div className="icon-bottom"><img src="/assets/icons/scroll_icon.svg" /></div>
     </div>
   </main>
 );
