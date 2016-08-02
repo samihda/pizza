@@ -12,7 +12,7 @@ const CornerButton = ({ step, onStartClick, onCancelClick }) => {
       );
     default:
       return (
-        <button className="red pure-button button-large icon-button" onClick={onCancelClick}>
+        <button className="button-red pure-button" onClick={onCancelClick}>
           <img className="icon-left" src="/assets/icons/cancel_icon.svg" />
           <span>CANCEL ORDER</span>
         </button>
