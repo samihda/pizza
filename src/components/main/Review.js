@@ -30,7 +30,7 @@ const Review = ({ onPrevClick, form }) => {
         <p>{form.street}, {form.houseNumber}</p>
         <p>{form.postCode}, {form.city}</p>
       </div>
-      <div className="paper-white">
+      <div className="paper-white container-relative">
         <button onClick={onPrevClick} className="pure-button button-previous">
           <img className="icon-left" src="/assets/icons/back_arrow.svg" />
           <span>Back</span>

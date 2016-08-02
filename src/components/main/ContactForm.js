@@ -146,7 +146,7 @@ export default class ContactForm extends React.Component {
               </div>
             </label>
           </div>
-          <div className="paper-white">
+          <div className="paper-white container-relative">
             <button type="button" onClick={this.handleReturn} className="pure-button button-previous">
               <img className="icon-left" src="/assets/icons/back_arrow.svg" />
               <span>Back</span>
