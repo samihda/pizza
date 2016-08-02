@@ -104,7 +104,7 @@ export default class OrderForm extends React.Component {
                 </div>
                 <div className="pure-u-1-6">
                   <button type="button" onClick={this.addIngredient} className="pure-input-1 plus-button pure-button">
-                    <img src="/assets/icons/add_icon.svg" />
+                    <img src={require('../../assets/icons/add_icon.png')} />
                   </button>
                 </div>
               </div>
@@ -112,7 +112,7 @@ export default class OrderForm extends React.Component {
                 {this.state.ingredients.map((ing, i) => (
                   <button type="button" key={i} value={ing} onClick={this.removeIngredient} className="ingredient pure-button">
                     <span>{ing}</span>
-                    <img className="icon-right" src="/assets/icons/cancel_small.svg" />
+                    <img className="icon-right" src={require('../../assets/icons/cancel_small.png')} />
                   </button>
                 ))}
               </div>
@@ -128,7 +128,7 @@ export default class OrderForm extends React.Component {
           <div className="paper-white">
             <button className="button-red pure-button">
               <span>Next</span>
-              <img className="icon-right" src="/assets/icons/next_icon.svg" />
+              <img className="icon-right" src={require('../../assets/icons/next_icon.png')} />
             </button>
           </div>
         </form>

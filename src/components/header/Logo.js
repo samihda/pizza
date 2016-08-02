@@ -1,7 +1,7 @@
 import React from 'react';
 
-const logo = "/assets/logo/feedme_logo.svg";
-const logoWhite = "/assets/logo/feedme_logo_white.svg";
+const logo = require('../../assets/logo/feedme_logo.png');
+const logoWhite = require('../../assets/logo/feedme_logo_white.png');
 
 const Logo = ({ step }) => (
   <div id="logo">

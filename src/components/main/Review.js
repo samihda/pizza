@@ -32,7 +32,7 @@ const Review = ({ onPrevClick, form }) => {
       </div>
       <div className="paper-white container-relative">
         <button onClick={onPrevClick} className="pure-button button-previous">
-          <img className="icon-left" src="/assets/icons/back_arrow.svg" />
+          <img className="icon-left" src={require('../../assets/icons/back_arrow.png')} />
           <span>Back</span>
         </button>
         <OrderButtonContainer />

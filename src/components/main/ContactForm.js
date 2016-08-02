@@ -148,12 +148,12 @@ export default class ContactForm extends React.Component {
           </div>
           <div className="paper-white container-relative">
             <button type="button" onClick={this.handleReturn} className="pure-button button-previous">
-              <img className="icon-left" src="/assets/icons/back_arrow.svg" />
+              <img className="icon-left" src={require('../../assets/icons/back_arrow.png')} />
               <span>Back</span>
             </button>
             <button className="button-red pure-button">
               <span>Next</span>
-              <img className="icon-right" src="/assets/icons/next_icon.svg" />
+              <img className="icon-right" src={require('../../assets/icons/next_icon.png')} />
             </button>
           </div>
         </form>
