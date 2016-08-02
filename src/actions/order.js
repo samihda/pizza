@@ -36,9 +36,3 @@ function failure() {
     type: 'FAILURE'
   };
 }
-
-export function reset() {
-  return {
-    type: 'RESET'
-  };
-}
