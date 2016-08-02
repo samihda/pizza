@@ -160,7 +160,7 @@ input[type="radio"]:checked + div {
   @extend .pizza-size;
   width: 50px;
   height: 50px;
-  border-radius: 50px;
+  border-radius: 25px;
 }
 
 .pizza-size-30 {
