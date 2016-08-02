@@ -120,6 +120,9 @@ export default class OrderForm extends React.Component {
             <label>
               <strong>Cheese rand? </strong>
               <input id="rand" type="checkbox" checked={this.state.rand} onChange={this.handleRandChange} />
+              <div className="rand-switch">
+                <div className="rand-switch-inner"></div>
+              </div>
             </label>
           </div>
           <div className="paper-white">

@@ -7,6 +7,7 @@ $green: rgb(124, 211, 138);
 $orange: rgb(255, 212, 134);
 $pale-orange: rgb(255, 243, 219);
 $gray: rgb(249, 249, 249);
+$dark-gray: rgb(233, 233, 233);
 
 html, button, input, select, .pure-g [class *= "pure-u"] {
   font-family: $font-stack;
@@ -88,6 +89,38 @@ li {
   @extend .icon-button;
 }
 
+#rand {
+  display: none;
+}
+
+.rand-switch {
+  box-sizing: border-box;
+  position: relative;
+  margin: 0.5em auto;
+  width: 50px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: $dark-gray;
+}
+
+.rand-switch-inner {
+  box-sizing: inherit;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  background-color: white;
+}
+
+#rand:checked + .rand-switch {
+  background-color: $red;
+  .rand-switch-inner {
+    left: 23px;
+  }
+}
+
 input[type="text"], select#ingredients {
   background-color: $gray;
   height: 52px;
@@ -115,7 +148,7 @@ input[type="radio"]:checked + div {
 
 .pizza-size {
   @extend .white;
-  border: 3px solid rgb(233, 233, 233);
+  border: 3px solid $dark-gray;
   margin: 0 1em;
   cursor: pointer;
   display: flex;
