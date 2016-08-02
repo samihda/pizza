@@ -58,7 +58,7 @@ export default class OrderForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const obj = assign({}, {
-      size: this.state.size,
+      size: parseInt(this.state.size, 10),
       ingredients: this.state.ingredients,
       rand: this.state.rand
     });
