@@ -137,15 +137,16 @@ input[type="radio"]:checked + div {
 }
 
 .pizza-container {
-  display: flex-inline;
+  display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
 }
 
 .pizza-child {
-  display: inline-block;
   flex: 1 1 0;
+  display: flex;
+  justify-content: center;
 }
 
 .pizza-size {
@@ -301,13 +302,14 @@ input[type="radio"]:checked + div {
 }
 
 .column-parent {
-  display: flex-inline;
+  display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .column {
-  display: inline-block;
+  max-width: 200px;
 }
 
 .ingredient-container {
