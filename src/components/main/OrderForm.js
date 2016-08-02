@@ -70,41 +70,64 @@ export default class OrderForm extends React.Component {
   render() {
     return (
       <main>
-        <form onSubmit={this.handleSubmit}>
-          <h1>Your Order</h1>
-          <p>Choose Pizza size in cm</p>
-          {sizeOpts.map((size, i) => (
-            <label key={i}>
-              <input name="size" type="radio" value={size} checked={size == this.state.size} onChange={this.handleSizeChange} />
-              {size}
-            </label>
-          ))}
-          <label>
-            Ingredients
-            <select id="ingredients" value={this.state.selectedIngredient} onChange={this.handleIngredientChange}>
-              <option value="">Choose Ingredients</option>
-              {ingredientOpts.map((str, i) => (
-                <option key={i} value={str}>{str}</option>
+        <form onSubmit={this.handleSubmit} className="pure-form pure-form-stacked">
+          <div className="paper-white">
+            <h1>Your Order</h1>
+            <strong>Choose Pizza size in cm</strong>
+            <div className="pizza-container">
+              {sizeOpts.map((size, i) => (
+                <div key={i} className="pizza-child">
+                  <label>
+                    <input name="size" type="radio" value={size} checked={size == this.state.size} onChange={this.handleSizeChange} />
+                    <div className={'pizza-size-' + size}>
+                      <strong>{size}</strong>
+                    </div>
+                  </label>
+                </div>
               ))}
-            </select>
-            <button type="button" onClick={this.addIngredient}>
-              <img src="/assets/icons/add_icon.svg" />
+            </div>
+            <label>
+              <strong>Ingredients</strong>
+              <div className="pure-g">
+                <div className="pure-u-5-6">
+                  <select
+                    id="ingredients"
+                    value={this.state.selectedIngredient}
+                    onChange={this.handleIngredientChange}
+                    className="pure-input-1"
+                  >
+                    <option value="">Choose Ingredients</option>
+                    {ingredientOpts.map((str, i) => (
+                      <option key={i} value={str}>{str}</option>
+                    ))}
+                  </select>
+                </div>
+                <div className="pure-u-1-6">
+                  <button type="button" onClick={this.addIngredient} className="pure-input-1 plus-button pure-button">
+                    <img src="/assets/icons/add_icon.svg" />
+                  </button>
+                </div>
+              </div>
+              <div className="ingredient-container">
+                {this.state.ingredients.map((ing, i) => (
+                  <button type="button" key={i} value={ing} onClick={this.removeIngredient} className="ingredient pure-button">
+                    <span>{ing}</span>
+                    <img className="icon-right" src="/assets/icons/cancel_small.svg" />
+                  </button>
+                ))}
+              </div>
+            </label>
+            <label>
+              <strong>Cheese rand? </strong>
+              <input id="rand" type="checkbox" checked={this.state.rand} onChange={this.handleRandChange} />
+            </label>
+          </div>
+          <div className="paper-white">
+            <button className="button-red pure-button">
+              <span>Next</span>
+              <img className="icon-right" src="/assets/icons/next_icon.svg" />
             </button>
-            {this.state.ingredients.map((ing, i) => (
-              <button type="button" key={i} value={ing} onClick={this.removeIngredient}>
-                {ing}
-                <span> <img src="/assets/icons/cancel_icon.svg" /></span>
-              </button>
-            ))}
-          </label>
-          <label>
-            Cheese rand?
-            <input id="rand" type="checkbox" checked={this.state.rand} onChange={this.handleRandChange} />
-          </label>
-          <button>
-            Next
-            <span> <img src="/assets/icons/next_icon.svg" /></span>
-          </button>
+          </div>
         </form>
       </main>
     );

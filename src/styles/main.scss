@@ -5,13 +5,17 @@ $primary: rgb(81, 81, 81);
 $red: rgb(228, 80, 80);
 $green: rgb(124, 211, 138);
 $orange: rgb(255, 212, 134);
+$pale-orange: rgb(255, 243, 219);
 $gray: rgb(249, 249, 249);
+
+html, button, input, select, .pure-g [class *= "pure-u"] {
+  font-family: $font-stack;
+} 
 
 body {
   color: white;
   background: url(../assets/background-picture.jpeg) no-repeat center center fixed;
   background-size: cover;
-  font-family: $font-stack;
   height: 100vh;
   min-width: 768px;
 }
@@ -56,7 +60,7 @@ nav {
 }
 
 form {
-  line-height: 2em;
+  line-height: 2.5em;
 }
 
 a {
@@ -84,8 +88,60 @@ li {
   @extend .icon-button;
 }
 
-input[type="text"] {
+input[type="text"], select#ingredients {
   background-color: $gray;
+  height: 52px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked + div {
+  @extend .red;
+}
+
+.pizza-container {
+  display: flex-inline;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.pizza-child {
+  display: inline-block;
+  flex: 1 1 0;
+}
+
+.pizza-size {
+  @extend .white;
+  border: 3px solid rgb(233, 233, 233);
+  margin: 0 1em;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pizza-size-20 {
+  @extend .pizza-size;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+.pizza-size-30 {
+  @extend .pizza-size;
+  width: 75px;
+  height: 75px;
+  border-radius: 75px;
+}
+
+.pizza-size-40 {
+  @extend .pizza-size;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
 }
 
 .button-red {
@@ -126,6 +182,11 @@ input[type="text"] {
   background-color: $green;
 }
 
+.orange {
+  color: $primary;
+  background-color: $pale-orange;
+}
+
 .orange-background {
   background-color: $orange;
 }
@@ -141,6 +202,12 @@ input[type="text"] {
 .button-large {
   padding: 1em 2em;
   margin-right: 0;
+}
+
+.plus-button {
+  @extend .orange-background;
+  height: 100%;
+  border: 5px solid white;
 }
 
 .icon-button {
@@ -189,4 +256,15 @@ input[type="text"] {
 
 .column {
   display: inline-block;
+}
+
+.ingredient-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.ingredient {
+  @extend .orange;
+  margin: 2px;
 }
